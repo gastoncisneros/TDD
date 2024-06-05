@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaApp.API", "FormulaApp.API.csproj", "{8AAED274-6B09-4AD8-973A-BE78F83C3D17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaApp.API", "FormulaApp.API\FormulaApp.API.csproj", "{8AAED274-6B09-4AD8-973A-BE78F83C3D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaApp.Test", "..\FormulaApp.Test\FormulaApp.Test.csproj", "{B05DC95D-BEAC-46A0-A776-3B54E07FE484}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaApp.Test", "FormulaApp.Test\FormulaApp.Test.csproj", "{B05DC95D-BEAC-46A0-A776-3B54E07FE484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
