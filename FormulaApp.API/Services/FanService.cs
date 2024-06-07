@@ -18,7 +18,17 @@ namespace FormulaApp.API.Services
 
         public async Task<List<Fan>?> GetAllFans()
         {
-            var response = await _httpClient.GetAsync(_configuration.Url);
+            HttpResponseMessage? response;
+
+            try
+            {
+                response = await _httpClient.GetAsync(_configuration.Url);
+            }
+            catch(Exception ex)
+            {
+                return new List<Fan>();
+            }
+
             if(response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 return new List<Fan>();
