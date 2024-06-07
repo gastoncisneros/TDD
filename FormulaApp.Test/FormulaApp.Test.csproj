@@ -28,10 +28,4 @@
     <ProjectReference Include="..\FormulaApp.API\FormulaApp.API.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-    <Folder Include="Fixtures\" />
-    <Folder Include="Tests\Services\" />
-  </ItemGroup>
-
 </Project>

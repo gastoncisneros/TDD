@@ -2,6 +2,7 @@
 using FormulaApp.API.Controllers;
 using FormulaApp.API.Models;
 using FormulaApp.API.Services.Interfaces;
+using FormulaApp.Test.Fixtures;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
@@ -22,7 +23,7 @@ namespace FormulaApp.Test.Tests.Controllers
         public async Task Get_OnNoFans_ReturnsStatusCode404()
         {
             //Arrange
-            _mockFanService.Setup(service => service.GetAllFans()).ReturnsAsync([]);
+            _mockFanService.Setup(service => service.GetAllFans()).ReturnsAsync(FansFixtures.GetEmptyFans);
 
             //Act
             var result = (NotFoundResult)await _fansController.Get();
@@ -35,7 +36,7 @@ namespace FormulaApp.Test.Tests.Controllers
         public async Task Get_OnNoFans_ReturnsNotFound()
         {
             //Arrange
-            _mockFanService.Setup(service => service.GetAllFans()).ReturnsAsync([]);
+            _mockFanService.Setup(service => service.GetAllFans()).ReturnsAsync(FansFixtures.GetEmptyFans);
 
             //Act
             var result = (NotFoundResult)await _fansController.Get();
@@ -48,8 +49,7 @@ namespace FormulaApp.Test.Tests.Controllers
         public async Task Get_OnSuccess_ReturnListOfFans()
         {
             //Arrange
-            _mockFanService.Setup(service => service.GetAllFans()).ReturnsAsync([new()]);
-
+            _mockFanService.Setup(service => service.GetAllFans()).ReturnsAsync(FansFixtures.GetFans);
             //Act
             var result = (OkObjectResult)await _fansController.Get();
 
