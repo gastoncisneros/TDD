@@ -4,6 +4,7 @@ using FormulaApp.API.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://*:5024");
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -15,14 +16,11 @@ builder.Services.Configure<ApiServiceConfiguration>(builder.Configuration.GetSec
 builder.Services.AddScoped<IFanService, FanService>();
 builder.Services.AddHttpClient<IFanService, FanService>();
 
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

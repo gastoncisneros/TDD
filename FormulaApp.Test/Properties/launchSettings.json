@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FormulaApp.Test": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
